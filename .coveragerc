@@ -1,0 +1,11 @@
+[run]
+omit =
+    src/__init__.py
+    src/features.py
+    src/evaluation.py
+    src/model_test.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:

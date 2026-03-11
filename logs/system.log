@@ -1,0 +1,64 @@
+2026-03-11 13:03:52,235 | INFO | matplotlib.font_manager | generated new fontManager
+2026-03-11 13:03:53,023 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:03:53,036 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:03:53,053 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:04:37,937 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:04:37,938 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:10,276 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:13:10,282 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:13:10,288 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:13:25,115 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:25,115 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:26,645 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:26,646 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:27,650 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:27,651 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:28,545 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:28,545 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:29,283 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:29,283 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:29,916 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:29,916 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:37,724 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:37,724 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:38,789 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:38,789 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:39,553 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:39,554 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:40,292 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:40,292 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:13:40,920 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:13:40,921 | INFO | passos_magicos_api | Prediction | RA=12345 | class=Em fase | confidence=1.00
+2026-03-11 13:22:55,519 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:22:55,524 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:22:55,536 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:22:58,720 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:22:58,721 | INFO | passos_magicos_api | Prediction | RA=20001 | class=Em fase | confidence=1.00
+2026-03-11 13:23:15,036 | INFO | app.predictor | PREDICTION | class=Moderada | confidence=1.00
+2026-03-11 13:23:15,037 | INFO | passos_magicos_api | Prediction | RA=20002 | class=Moderada | confidence=1.00
+2026-03-11 13:23:25,179 | INFO | app.predictor | PREDICTION | class=Moderada | confidence=1.00
+2026-03-11 13:23:25,180 | INFO | passos_magicos_api | Prediction | RA=20003 | class=Moderada | confidence=1.00
+2026-03-11 13:23:32,512 | INFO | app.predictor | PREDICTION | class=Moderada | confidence=1.00
+2026-03-11 13:23:32,513 | INFO | passos_magicos_api | Prediction | RA=20004 | class=Moderada | confidence=1.00
+2026-03-11 13:23:38,379 | INFO | app.predictor | PREDICTION | class=Em fase | confidence=1.00
+2026-03-11 13:23:38,380 | INFO | passos_magicos_api | Prediction | RA=20005 | class=Em fase | confidence=1.00
+2026-03-11 13:29:23,415 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:29:23,415 | INFO | app.predictor | Modelo carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:29:23,416 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:29:23,416 | INFO | app.predictor | Scaler carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:29:23,417 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:29:23,418 | INFO | app.predictor | Label encoders carregados: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:29:23,418 | INFO | app.predictor | Features esperadas: ['Ano ingresso', 'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'RA', 'Fase', 'Turma', 'Gênero', 'Instituição de ensino']
+2026-03-11 13:29:23,418 | INFO | app.predictor | Artefatos carregados com sucesso
+2026-03-11 13:29:56,901 | WARNING | app.predictor | Valor '20006' não visto no treino para 'RA'
+2026-03-11 13:29:56,901 | WARNING | app.predictor | Valor 'Fase 2' não visto no treino para 'Fase'
+2026-03-11 13:29:56,902 | WARNING | app.predictor | Valor 'Colégio Estadual' não visto no treino para 'Instituição de ensino'
+2026-03-11 13:29:56,906 | INFO | passos_magicos_api | Prediction | RA=20006 | class=Em fase | confidence=1.00
+2026-03-11 13:30:15,170 | WARNING | app.predictor | Valor '20006' não visto no treino para 'RA'
+2026-03-11 13:30:15,170 | WARNING | app.predictor | Valor 'Fase 2' não visto no treino para 'Fase'
+2026-03-11 13:30:15,171 | WARNING | app.predictor | Valor 'Colégio Estadual' não visto no treino para 'Instituição de ensino'
+2026-03-11 13:30:15,174 | INFO | passos_magicos_api | Prediction | RA=20006 | class=Severa | confidence=1.00
+2026-03-11 13:30:38,742 | WARNING | app.predictor | Valor '20008' não visto no treino para 'RA'
+2026-03-11 13:30:38,743 | WARNING | app.predictor | Valor 'Fase 2' não visto no treino para 'Fase'
+2026-03-11 13:30:38,744 | WARNING | app.predictor | Valor 'Colégio Estadual' não visto no treino para 'Instituição de ensino'
+2026-03-11 13:30:38,747 | INFO | passos_magicos_api | Prediction | RA=20008 | class=Severa | confidence=1.00

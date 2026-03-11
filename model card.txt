@@ -1,0 +1,258 @@
+# Model Card: Predição de Defasagem Escolar - Passos Mágicos
+
+## Informações Básicas do Modelo
+
+**Nome do Modelo:** Preditor de Defasagem Escolar  
+**Versão:** 1.0.0  
+**Data de Criação:** Janeiro 2025  
+**Desenvolvido por:** Equipe Data Science - Datathon FIAP  
+**Licença:** Uso interno Associação Passos Mágicos  
+
+---
+
+## 1. Descrição do Modelo
+
+### Objetivo
+Prever o nível de defasagem escolar de estudantes da Associação Passos Mágicos, classificando-os em três categorias:
+- **Em fase:** Estudante adequado ao nível esperado
+- **Moderada:** Pequena defasagem que requer atenção
+- **Severa:** Defasagem significativa que necessita intervenção urgente
+
+### Tipo de Modelo
+Classificação Multiclasse (3 classes)
+
+### Algoritmo Final
+[A ser preenchido após treinamento - provavelmente Random Forest, XGBoost ou LightGBM]
+
+---
+
+## 2. Uso Pretendido
+
+### Casos de Uso Principais
+1. **Identificação Precoce de Risco:** Detectar estudantes em risco de defasagem antes que se agrave
+2. **Alocação de Recursos:** Direcionar recursos pedagógicos e psicopedagógicos de forma eficiente
+3. **Planejamento de Intervenções:** Planejar intervenções personalizadas baseadas no nível de risco
+4. **Monitoramento Contínuo:** Acompanhar a evolução dos estudantes ao longo do tempo
+
+### Usuários Pretendidos
+- Coordenadores pedagógicos da Associação Passos Mágicos
+- Psicólogos e psicopedagogos
+- Equipe de gestão educacional
+- Sistema automatizado de alerta
+
+### Casos de Uso NÃO Recomendados
+- ❌ Decisões punitivas ou excludentes baseadas apenas na predição
+- ❌ Uso sem validação humana qualificada
+- ❌ Aplicação em contextos fora da Associação Passos Mágicos sem revalidação
+- ❌ Decisões automáticas sem revisão pedagógica
+
+---
+
+## 3. Fatores Considerados
+
+### Grupos Demográficos
+- **Faixa Etária:** Estudantes de 6 a 18 anos
+- **Contexto Socioeconômico:** Crianças e jovens em situação de vulnerabilidade social
+- **Localização:** Município de Embu-Guaçu, SP
+
+### Variáveis de Entrada (Features)
+
+#### Indicadores Principais
+- **IAN** - Indicador de Adequação de Nível
+- **IDA** - Indicador de Desempenho Acadêmico
+- **IEG** - Indicador de Engajamento
+- **IAA** - Indicador de Autoavaliação
+- **IPS** - Indicador Psicossocial
+- **IPP** - Indicador Psicopedagógico
+- **IPV** - Indicador de Ponto de Virada
+- **INDE** - Índice de Desenvolvimento Educacional
+
+#### Dados Acadêmicos
+- Notas de Português, Matemática e Inglês
+- Fase/Turma na Associação
+- Anos de participação no programa
+
+#### Dados Contextuais
+- Idade do aluno
+- Classificação PEDRA (Quartzo, Ágata, Ametista, Topázio)
+- Ponto de Virada atingido (Sim/Não)
+
+---
+
+## 4. Métricas de Avaliação
+
+### Métrica Principal
+**F1-Score Weighted:** Escolhido por balancear Precision e Recall em um problema multiclasse potencialmente desbalanceado.
+
+### Métricas Secundárias
+- **Accuracy:** Taxa geral de acerto
+- **Precision (Macro/Weighted):** Proporção de predições positivas corretas
+- **Recall (Macro/Weighted):** Proporção de casos reais identificados
+- **Confusion Matrix:** Distribuição detalhada dos erros
+
+### Resultados de Avaliação
+[A ser preenchido após treinamento]
+
+| Métrica | Treino | Teste |
+|---------|--------|-------|
+| Accuracy | TBD | TBD |
+| F1-Score (Weighted) | TBD | TBD |
+| Precision (Weighted) | TBD | TBD |
+| Recall (Weighted) | TBD | TBD |
+
+### Critérios de Aceitação
+- ✅ F1-Score >= 0.70: Modelo aceitável para produção
+- ✅ F1-Score >= 0.80: Modelo excelente
+- ⚠️ F1-Score < 0.70: Requer ajustes antes do deploy
+
+---
+
+## 5. Dados de Treinamento
+
+### Dataset
+**Fonte:** Pesquisa Extensiva do Desenvolvimento Educacional (PEDE) - Associação Passos Mágicos
+
+**Período:** 2020, 2021, 2022
+
+**Tamanho:**
+- Total de registros: [TBD após processamento]
+- Features: [TBD]
+- Distribuição de classes:
+  - Em fase: [TBD]%
+  - Moderada: [TBD]%
+  - Severa: [TBD]%
+
+### Pré-processamento
+1. **Consolidação temporal:** Dados de múltiplos anos consolidados
+2. **Tratamento de missing:** Imputação por mediana (numérico) e moda (categórico)
+3. **Feature Engineering:** Criação de 20+ features derivadas
+4. **Normalização:** StandardScaler para features numéricas
+5. **Encoding:** LabelEncoder para features categóricas
+6. **Split:** 80% treino / 20% teste (estratificado)
+
+---
+
+## 6. Considerações Éticas
+
+### Vieses Potenciais
+- **Viés de Seleção:** Modelo treinado apenas com estudantes da Associação
+- **Viés Temporal:** Dados limitados a 2020-2022
+- **Viés de Medição:** Dependência da qualidade das avaliações internas
+
+### Impacto Social
+✅ **Positivo:**
+- Identificação precoce permite intervenções direcionadas
+- Melhor alocação de recursos pedagógicos
+- Suporte personalizado aos estudantes
+
+⚠️ **Riscos:**
+- Estigmatização de estudantes classificados como "risco severo"
+- Dependência excessiva do modelo sem análise humana
+- Profecia autorrealizável se não usado adequadamente
+
+### Mitigações Implementadas
+1. **Supervisão Humana:** Recomendação explícita de revisão pedagógica
+2. **Explicabilidade:** Modelo interpretável (tree-based)
+3. **Monitoramento:** Dashboard de drift e performance
+4. **Documentação:** Transparência sobre limitações
+5. **Validação Contínua:** Retreinamento periódico recomendado
+
+---
+
+## 7. Limitações
+
+### Limitações Conhecidas
+1. **Generalização:** Modelo específico para o contexto da Passos Mágicos
+2. **Dados Históricos:** Baseado em dados de 2020-2022
+3. **Features Obrigatórias:** Requer indicadores específicos (IAN, IDA, etc.)
+4. **Causalidade:** Modelo prediz correlações, não causas
+5. **Contexto Externo:** Não considera fatores externos (pandemia, mudanças familiares)
+
+### Quando NÃO Usar
+- ❌ Estudantes fora do perfil da Associação
+- ❌ Decisões sem validação pedagógica
+- ❌ Contextos educacionais muito diferentes
+- ❌ Dados incompletos ou de baixa qualidade
+
+---
+
+## 8. Recomendações de Uso
+
+### Best Practices
+1. **Sempre revisar predições com equipe pedagógica**
+2. **Usar como ferramenta de apoio, não decisão final**
+3. **Monitorar performance do modelo mensalmente**
+4. **Retreinar modelo a cada 6 meses com novos dados**
+5. **Validar predições com feedback dos educadores**
+
+### Pipeline de Uso Recomendado
+```
+Dados do Estudante 
+    ↓
+Modelo Preditivo
+    ↓
+Classificação de Risco
+    ↓
+Revisão Pedagógica ← [OBRIGATÓRIO]
+    ↓
+Plano de Intervenção
+    ↓
+Monitoramento Contínuo
+```
+
+---
+
+## 9. Manutenção e Atualização
+
+### Frequência de Retreinamento
+- **Recomendado:** A cada 6 meses
+- **Mínimo:** Anualmente
+- **Trigger:** Quando F1-Score em produção < 0.65
+
+### Monitoramento Contínuo
+- **Data Drift:** Mudanças na distribuição das features
+- **Concept Drift:** Mudanças na relação feature-target
+- **Performance Drift:** Degradação das métricas
+- **Feature Importance:** Mudanças nas features mais importantes
+
+### Versionamento
+- Cada modelo treinado recebe ID único
+- Metadados salvos (data, parâmetros, métricas)
+- Rollback possível para versão anterior
+
+---
+
+## 10. Contato e Governança
+
+### Responsáveis
+- **Desenvolvimento:** Equipe Data Science - Datathon FIAP
+- **Manutenção:** [A definir pela Associação Passos Mágicos]
+- **Governança:** Coordenação Pedagógica
+
+### Documentação Adicional
+- README.md: Instruções de uso técnico
+- evaluation_report.txt: Relatório detalhado de avaliação
+- Notebooks: Análise exploratória e experimentação
+
+### Feedback e Melhorias
+Sugestões de melhoria e reports de problemas devem ser encaminhados para a equipe responsável com:
+- Descrição do problema/sugestão
+- Dados de exemplo (se aplicável)
+- Contexto de uso
+
+---
+
+## 11. Aprovações
+
+**Status:** 🟡 Em Validação
+
+**Aprovações Necessárias:**
+- [ ] Equipe Técnica (Data Science)
+- [ ] Coordenação Pedagógica
+- [ ] Comitê de Ética (se aplicável)
+- [ ] Gestão da Associação
+
+---
+
+**Última Atualização:** Janeiro 2025  
+**Próxima Revisão:** [6 meses após deploy]
