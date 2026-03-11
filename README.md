@@ -78,6 +78,9 @@ monitoring/
  └── dashboard.py
 
 logs/
+ ├── api.log
+ ├── system.log
+ └── predictions.csv
 
 Dockerfile
 requirements.txt
@@ -253,27 +256,163 @@ http://localhost:5000
 
 # 📊 Monitoramento do Modelo
 
-Para garantir confiabilidade em produção foram implementados mecanismos de monitoramento:
+O projeto inclui um sistema de **monitoramento do modelo em produção**, permitindo acompanhar o comportamento da API, das predições realizadas e possíveis mudanças na distribuição dos dados.
 
-### Monitoramento de Drift
+O monitoramento é composto por três componentes principais:
 
-O sistema monitora:
-
-* Data Drift
-* Prediction Drift
-* Performance Drift
-
-### Logging
-
-Logs são registrados para:
-
-* requisições da API
-* erros
-* predições realizadas
-* tempo de resposta
+- **Sistema de logging**
+- **Detecção de data drift**
+- **Dashboard de monitoramento**
 
 ---
 
+# 📝 Sistema de Logging
+
+Os logs são registrados **na camada da API (`main.py`)**, garantindo que cada requisição de predição seja rastreável.
+
+A classe responsável pela inferência (`predictor.py`) **não grava logs diretamente**, mantendo separação clara de responsabilidades.
+
+Estrutura de logs gerados:
+
+logs/
+ ├── api.log
+ ├── system.log
+ └── predictions.csv
+
+---
+
+## 📡 API Logs
+
+Registram eventos relacionados às requisições da API:
+
+- requisições recebidas
+- execução do endpoint `/predict`
+- erros da aplicação
+
+Arquivo:
+      logs/api.log
+
+Exemplo:
+```
+2026-03-11 13:05:21 INFO Recebendo requisição de predição RA=20001
+2026-03-11 13:05:21 INFO Predição realizada: Em fase
+```
+
+---
+
+## ⚙️ System Logs
+
+Registram eventos internos do sistema:
+
+- inicialização da API
+- carregamento do modelo
+- erros internos da aplicação
+
+Arquivo:
+      logs/system.log
+      
+---
+
+## 📈 Prediction Logs
+
+Cada predição realizada pela API é registrada no arquivo:
+
+logs/predictions.csv
+
+Campos registrados:
+
+- timestamp
+- RA do estudante
+- classe prevista
+- confiança da predição
+
+Exemplo:
+```
+timestamp,RA,prediction,confidence
+2026-03-11T13:10:12,12345,Em fase,0.92
+2026-03-11T13:10:20,12346,Moderada,0.71
+```
+
+Esse log é utilizado para:
+
+- auditoria de predições
+- análise de comportamento do modelo
+- monitoramento de drift
+
+---
+
+# 📉 Monitoramento de Data Drift
+
+O sistema implementa detecção de **data drift**, comparando a distribuição dos dados utilizados no treinamento com os dados recebidos em produção.
+
+A detecção utiliza o **teste estatístico Kolmogorov-Smirnov (KS Test)**.
+
+Arquivo responsável:
+      monitoring/drift_monitor.py
+
+O sistema compara:
+dados de treino
+vs
+dados recebidos em produção
+
+Se a distribuição de alguma variável mudar significativamente, um alerta de drift é gerado.
+
+Critério utilizado:
+p-value < 0.05 → drift detectado
+
+---
+
+# 📊 Dashboard de Monitoramento
+
+O projeto inclui um dashboard interativo desenvolvido em **Streamlit** para acompanhar o comportamento do modelo em produção.
+
+Arquivo:
+monitoring/dashboard.py
+
+Executar o dashboard:
+
+```bash
+streamlit run monitoring/dashboard.py
+---
+## 📊 Informações exibidas no Dashboard
+
+O dashboard apresenta:
+
+### 📈 Métricas principais
+
+- total de predições realizadas
+- confiança média do modelo
+- última classe prevista
+
+### 📊 Visualizações
+
+- distribuição das classes previstas
+- distribuição da confiança das predições
+- histórico das últimas predições
+
+### 📝 Logs do sistema
+
+- últimas entradas do `api.log`
+- últimas entradas do `system.log`
+
+### 📉 Monitoramento de Drift
+
+- tabela com *p-values* por feature
+- gráfico de detecção de drift
+- alerta visual caso drift seja detectado
+
+---
+
+## 🎯 Benefícios do Monitoramento
+
+O sistema de monitoramento permite:
+
+- rastrear todas as predições realizadas
+- detectar mudanças nos dados em produção
+- identificar possíveis problemas no modelo
+- acompanhar o comportamento da API
+
+Essas práticas seguem princípios de **MLOps**, garantindo maior confiabilidade e observabilidade do sistema de Machine Learning em produção.
 # 🧪 Testes Automatizados
 
 Os testes foram implementados utilizando **pytest**.

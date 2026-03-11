@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+from monitoring.drift_monitor import detect_drift
 
 st.title("📊 Monitoramento do Modelo - Passos Mágicos")
 
@@ -19,19 +20,19 @@ if predictions_file.exists():
     # =========================
     # Métricas principais
     # =========================
-    
+
     col1, col2, col3 = st.columns(3)
-    
+
     col1.metric(
         "Total de Predições",
         len(df)
     )
-    
+
     col2.metric(
         "Confiança Média",
         round(df["confidence"].mean(), 2)
     )
-    
+
     col3.metric(
         "Última Classe Prevista",
         df["prediction"].iloc[-1]
@@ -88,6 +89,64 @@ else:
 # =========================
 # Logs da API
 # =========================
+st.subheader("📉 Monitoramento de Data Drift")
+
+try:
+
+    drift_report = detect_drift()
+
+    if drift_report:
+
+        drift_data = []
+
+        for feature, result in drift_report.items():
+
+            drift_data.append({
+                "feature": feature,
+                "p_value": result["p_value"],
+                "drift_detected": result["drift_detected"]
+            })
+
+        drift_df = pd.DataFrame(drift_data)
+
+        st.dataframe(drift_df)
+
+        # gráfico
+        import matplotlib.pyplot as plt
+
+        fig, ax = plt.subplots(figsize=(6,3))
+
+        ax.bar(
+            drift_df["feature"],
+            drift_df["p_value"]
+        )
+
+        ax.axhline(
+            y=0.05,
+            linestyle="--"
+        )
+
+        ax.set_ylabel("p-value")
+        ax.set_title("Detecção de Drift")
+
+        st.pyplot(fig)
+
+        # alerta
+        if drift_df["drift_detected"].any():
+
+            st.error("⚠ Drift detectado em algumas features!")
+
+        else:
+
+            st.success("✅ Nenhum drift detectado")
+
+    else:
+
+        st.info("Dados insuficientes para calcular drift.")
+
+except Exception as e:
+
+    st.warning("Não foi possível calcular drift.")
 
 st.subheader("📡 Logs da API")
 

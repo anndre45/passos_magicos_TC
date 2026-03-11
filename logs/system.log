@@ -62,3 +62,27 @@
 2026-03-11 13:30:38,743 | WARNING | app.predictor | Valor 'Fase 2' não visto no treino para 'Fase'
 2026-03-11 13:30:38,744 | WARNING | app.predictor | Valor 'Colégio Estadual' não visto no treino para 'Instituição de ensino'
 2026-03-11 13:30:38,747 | INFO | passos_magicos_api | Prediction | RA=20008 | class=Severa | confidence=1.00
+2026-03-11 13:47:27,736 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:47:27,736 | INFO | app.predictor | Modelo carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:47:27,737 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:47:27,737 | INFO | app.predictor | Scaler carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:47:27,738 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:47:27,738 | INFO | app.predictor | Label encoders carregados: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:47:27,738 | INFO | app.predictor | Features esperadas: ['Ano ingresso', 'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'RA', 'Fase', 'Turma', 'Gênero', 'Instituição de ensino']
+2026-03-11 13:47:27,738 | INFO | app.predictor | Artefatos carregados com sucesso
+2026-03-11 13:48:13,223 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:48:13,224 | INFO | app.predictor | Modelo carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:48:13,224 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:48:13,225 | INFO | app.predictor | Scaler carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:48:13,226 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:48:13,226 | INFO | app.predictor | Label encoders carregados: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:48:13,226 | INFO | app.predictor | Features esperadas: ['Ano ingresso', 'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'RA', 'Fase', 'Turma', 'Gênero', 'Instituição de ensino']
+2026-03-11 13:48:13,226 | INFO | app.predictor | Artefatos carregados com sucesso
+2026-03-11 13:48:15,081 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:48:15,081 | INFO | app.predictor | Modelo carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\model.pkl
+2026-03-11 13:48:15,082 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:48:15,082 | INFO | app.predictor | Scaler carregado: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\scaler.pkl
+2026-03-11 13:48:15,083 | INFO | src.utils | Objeto carregado com sucesso de: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:48:15,083 | INFO | app.predictor | Label encoders carregados: C:\Users\andre\OneDrive\Área de Trabalho\passos_magicos_TC (3)\passos_magicos_TC\passos_magicos_TC\models\label_encoder.pkl
+2026-03-11 13:48:15,084 | INFO | app.predictor | Features esperadas: ['Ano ingresso', 'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'RA', 'Fase', 'Turma', 'Gênero', 'Instituição de ensino']
+2026-03-11 13:48:15,084 | INFO | app.predictor | Artefatos carregados com sucesso
