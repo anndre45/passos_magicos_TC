@@ -373,6 +373,8 @@ Executar o dashboard:
 
 ```bash
 streamlit run monitoring/dashboard.py
+```
+
 ---
 ## 📊 Informações exibidas no Dashboard
 
